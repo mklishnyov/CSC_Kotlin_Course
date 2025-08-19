@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TranslationProjectSettings">
+    <option name="currentTranslationLanguage" value="Russian" />
+    <option name="structureTranslation">
+      <map>
+        <entry key="Russian">
+          <value>
+            <map>
+              <entry key="1006365197" value="Мастермайнд - Пользовательские функции  " />
+              <entry key="1019379491" value="Мастермайнд - Составные операторы If  " />
+              <entry key="1021356481" value="История-головоломка - Завершение проекта  " />
+              <entry key="1120394004" value="Генератор узоров - Завершение приложения  " />
+              <entry key="1152431309" value="Мастермайнд - Основы о коллекциях  " />
+              <entry key="1166766094" value="Виселица - Функция isCorrectInput  " />
+              <entry key="1170272381" value="Мастермайнд - isComplete функция  " />
+              <entry key="1190201896" value="Мастермайнд - Типы переменных  " />
+              <entry key="1229192821" value="Консольный Photoshop - Введение  " />
+              <entry key="1229753076" value="Мастермайнд Продвинутый - Функция Random  " />
+              <entry key="1240099384" value="Генератор узоров - Функция dropTopLine  " />
+              <entry key="1278662430" value="Мастермайнд - Завершение основной игры  " />
+              <entry key="1284940740" value="Виселица - Функция getRoundResults  " />
+              <entry key="1290076994" value="Мастермайнд Продвинутый - Функция isCorrectInput  " />
+              <entry key="1298754091" value="Консольный Photoshop - Функция lines  " />
+              <entry key="13109812" value="Мастермайнд - Завершение функции isComplete  " />
+              <entry key="1368513525" value="Консольный Photoshop - Функция getPicture  " />
+              <entry key="1412191977" value="История-головоломка - Первая программа на Kotlin  " />
+              <entry key="1412220528" value="Введение  " />
+              <entry key="1441227087" value="Мастермайнд - Play Game функция  " />
+              <entry key="1444969308" value="Мастермайнд - Введение  " />
+              <entry key="1477657219" value="Мастермайнд Продвинутый - Завершение игры  " />
+              <entry key="1479688163" value="Виселица - Функция generateSecret  " />
+              <entry key="1495658846" value="Консольный Photoshop - Функция repeat  " />
+              <entry key="1496648535" value="Мастермайнд - Функция isWon  " />
+              <entry key="15384542" value="Генератор узоров - Функция canvasGenerator  " />
+              <entry key="1584793307" value="Разминка  " />
+              <entry key="1609671976" value="Консольный Photoshop - Функция let Scope  " />
+              <entry key="1629287997" value="Консольный Photoshop - Функция error  " />
+              <entry key="1632845494" value="Мастермайнд Продвинутый - Обработка ошибок  " />
+              <entry key="1642783440" value="Мастермайнд - Функция printRoundResults  " />
+              <entry key="1651787790" value="Мастермайнд - Функция countExactMatches  " />
+              <entry key="1676423900" value="Kotlin Введение - Добро пожаловать!  " />
+              <entry key="168358096" value="Мастермайнд - Функция isLost  " />
+              <entry key="1691431341" value="Мастермайнд - Условный оператор как выражение  " />
+              <entry key="1709046670" value="Последний рывок  " />
+              <entry key="1725484953" value="Мастермайнд Продвинутый - Функция joinToString  " />
+              <entry key="172830079" value="История-головоломка - Чтение ввода пользователя, практика  " />
+              <entry key="1762576790" value="История-головоломка - Начало игры  " />
+              <entry key="1826732352" value="Мастермайнд Продвинутый - Функция safeUserInput  " />
+              <entry key="1835776409" value="Консольный Photoshop - Реализация applySquaredFilter  " />
+              <entry key="1840247486" value="Виселица - Завершение игры  " />
+              <entry key="1843240451" value="История-головоломка - Точка входа в программу  " />
+              <entry key="1847786086" value="Мастермайнд - Лямбда-выражения  " />
+              <entry key="187571066" value="Мастермайнд - TODO функция  " />
+              <entry key="192844197" value="Консольный Photoshop - null значение  " />
+              <entry key="1948062985" value="Виселица - Функция generateNewUserWord  " />
+              <entry key="1972483715" value="Мастермайнд - Инструкция Break  " />
+              <entry key="1988905602" value="Консольный Photoshop - Функции фильтров  " />
+              <entry key="2030724675" value="Мастермайнд - Run Game  " />
+              <entry key="2042704900" value="Консольный Photoshop - Функция applyFilter  " />
+              <entry key="2065245492" value="Консольный Photoshop - Функция safeReadLine  " />
+              <entry key="2085825446" value="Виселица - Функция getHiddenSecret  " />
+              <entry key="2128193824" value="Виселица - Введение  " />
+              <entry key="214162757" value="История-головоломка - Введение  " />
+              <entry key="215738047" value="Мастермайнд - Функция countPartialMatches  " />
+              <entry key="21668245" value="Мастермайнд - Добавить первые пользовательские функции  " />
+              <entry key="223687468" value="Консольный Photoshop - StringBuilder  " />
+              <entry key="230726355" value="Консольный Photoshop - Null Safety  " />
+              <entry key="316297317" value="Виселица - Функция isComplete  " />
+              <entry key="378596203" value="История-головоломка - Чтение ввода пользователя, теория  " />
+              <entry key="398217788" value="История-головоломка - Комментарии  " />
+              <entry key="410448577" value="История-головоломка - Переменные, практика  " />
+              <entry key="42223778" value="Мастермайнд - Изменяемая переменная  " />
+              <entry key="436171823" value="Мастермайнд - Переменные для настроек игры  " />
+              <entry key="459293849" value="Генератор узоров - Функция repeatHorizontally  " />
+              <entry key="468192544" value="Чат - Задать первый вопрос  " />
+              <entry key="471158885" value="Виселица  " />
+              <entry key="512051311" value="Мастермайнд Продвинутый - Функция generateSecret  " />
+              <entry key="540878076" value="Мастермайнд - Логические операторы  " />
+              <entry key="541942201" value="Mastermind Advanced  " />
+              <entry key="553514186" value="Консольный Photoshop - Функция choosePicture  " />
+              <entry key="553691845" value="Консольный Photoshop - Функция chooseFilter  " />
+              <entry key="554684746" value="Мастермайнд - Циклы  " />
+              <entry key="563522277" value="История-головоломка - Встроенные функции  " />
+              <entry key="599627186" value="Первое знакомство с программированием  " />
+              <entry key="604688510" value="История-головоломка - Переменные, теория  " />
+              <entry key="615480409" value="Опрос  " />
+              <entry key="619115895" value="Чат - Введение  " />
+              <entry key="669870424" value="Консольный Photoshop - Функция trimPicture  " />
+              <entry key="68121813" value="Мастермайнд Продвинутый - Введение  " />
+              <entry key="692295510" value="Чат - Задать второй вопрос  " />
+              <entry key="694346756" value="Генератор узоров - Функция getPatternHeight  " />
+              <entry key="734671394" value="Чат  " />
+              <entry key="792095342" value="Генератор узоров - Введение  " />
+              <entry key="815582437" value="Почти готово  " />
+              <entry key="819355706" value="Консольный Photoshop - Завершение приложения  " />
+              <entry key="822630104" value="Опрос обратной связи  " />
+              <entry key="85088674" value="Виселица - Функция safeUserInput  " />
+              <entry key="857708508" value="Генератор узоров - Функция fillPatternRow  " />
+              <entry key="912657372" value="Мастермайнд - Функция countAllMatches  " />
+              <entry key="919228894" value="Генератор узоров - Функция canvasWithGapsGenerator  " />
+              <entry key="949232906" value="Чат - Завершение проекта  " />
+              <entry key="957199675" value="Консольный Photoshop - Выражение when  " />
+              <entry key="964908412" value="Мастермайнд - Функции как выражения  " />
+              <entry key="965912956" value="Консольный Photoshop - Многострочные строки  " />
+              <entry key="990585351" value="Мастермайнд - Условный оператор  " />
+              <entry key="999114955" value="Консольный Photoshop - Реализация applyBordersFilter  " />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="translationVersions">
+      <map>
+        <entry key="Russian" value="474" />
+      </map>
+    </option>
+  </component>
+</project>

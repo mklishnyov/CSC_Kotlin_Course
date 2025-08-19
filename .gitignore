@@ -1,0 +1,11 @@
+# Project exclude paths
+/.gradle/
+/build/
+/Chat/task/build/
+/TheFirstDateWithProgramming/task/build/
+/TheFirstDateWithProgramming/task/out/
+/TheFirstDateWithProgramming/task/out/production/classes/
+/utils/build/
+/utils/out/
+/utils/out/production/classes/
+/WarmUp/task/build/
