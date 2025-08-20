@@ -21,6 +21,27 @@ fun isWon(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete &&
 // You will use this function later
 fun isLost(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete && attempts > maxAttemptsCount
 
+fun isComplete(secret: String, currentGuess: String): Boolean = secret == currentGuess.replace(separator, "")
+
+fun generateNewUserWord(secret: String, guess: Char, currentUserWord: String): String {
+    var newUserWord = ""
+    for ((index, i) in secret.withIndex()) {
+        newUserWord += if (guess == i) {
+            "$i$separator"
+        } else {
+            "${currentUserWord[index * 2]}$separator"
+        }
+    }
+    return newUserWord.removeSuffix("")
+}
+
+fun generateSecret(): String = words.random()
+
+fun getHiddenSecret(wordLength: Int): String {
+    val hiddenSecret = List(wordLength) { underscore }.joinToString(separator)
+    return hiddenSecret
+}
+
 fun main() {
     // Uncomment this code on the last step of the game
 
