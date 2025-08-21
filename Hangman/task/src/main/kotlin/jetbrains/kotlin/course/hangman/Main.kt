@@ -1,7 +1,7 @@
 package jetbrains.kotlin.course.hangman
 
 // You will use this function later
-fun getGameRules(wordLength: Int, maxAttemptsCount: Int) = "Welcome to the game!$newLineSymbol$newLineSymbol" +
+fun getGameRules(wordLength: Int, maxAttemptsCount: Int): String = "Welcome to the game!$newLineSymbol$newLineSymbol" +
         "In this game, you need to guess the word made by the computer.$newLineSymbol" +
         "The hidden word will appear as a sequence of underscores, one underscore means one letter.$newLineSymbol" +
         "You have $maxAttemptsCount attempts to guess the word.$newLineSymbol" +
@@ -32,19 +32,63 @@ fun generateNewUserWord(secret: String, guess: Char, currentUserWord: String): S
             "${currentUserWord[index * 2]}$separator"
         }
     }
-    return newUserWord.removeSuffix("")
+    return newUserWord.removeSuffix(separator)
 }
 
 fun generateSecret(): String = words.random()
 
-fun getHiddenSecret(wordLength: Int): String {
-    val hiddenSecret = List(wordLength) { underscore }.joinToString(separator)
-    return hiddenSecret
+fun getHiddenSecret(wordLength: Int): String = List(wordLength) { underscore }.joinToString(separator)
+
+fun isCorrectInput(userInput: String): Boolean {
+    var b = true
+    if (userInput.length != 1) {
+        println("The length of your guess should be 1! Try again!")
+        b = false
+    }
+    for (i in userInput) if (!i.isLetter()) {
+        println("You should input only English letters! Try again!")
+        b = false
+        break
+    }
+    return b
 }
 
-fun main() {
-    // Uncomment this code on the last step of the game
+fun safeUserInput(): Char {
+    println("Please input your guess.")
+    var guess = safeReadLine()
+    while (!isCorrectInput(guess)) guess = safeReadLine()
+    return guess.uppercase().single()
+}
 
-    // println(getGameRules(wordLength, maxAttemptsCount))
-    // playGame(generateSecret(), maxAttemptsCount)
+fun getRoundResults(secret: String, guess: Char, currentUserWord: String): String {
+    val result = if (guess !in secret) {
+        println("Sorry, the secret does not contain the symbol: $guess. The current word is $currentUserWord")
+        currentUserWord
+    } else {
+        val newWord = generateNewUserWord(secret, guess, currentUserWord)
+        println("Great! This letter is in the word! The current word is $newWord")
+        newWord
+    }
+    return result
+}
+
+fun playGame(secret: String, maxAttemptsCount: Int): Unit {
+    var complete: Boolean
+    var attempts = 0
+    do {
+        val guess = safeUserInput()
+        getRoundResults(secret, guess, getHiddenSecret(wordLength))
+        complete = isComplete(secret, guess.toString())
+        attempts++
+        if (isLost(complete, attempts, maxAttemptsCount)) {
+            println("Sorry, you lost! My word is $secret")
+            break
+        } else if (isWon(complete, attempts, maxAttemptsCount)) {
+            println("Congratulations! You guessed it!")
+        }
+    } while (!complete)
+}
+fun main() {
+    println(getGameRules(wordLength, maxAttemptsCount))
+    playGame(generateSecret(), maxAttemptsCount)
 }
