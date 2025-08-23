@@ -7,5 +7,8 @@ internal val mainClass = TestClass(
         applyBordersFilterMethod,
         applySquaredFilterMethod,
         applyFilterMethod,
-    ),
+        chooseFilterMethod,
+        safeReadLineMethod,
+        choosePictureMethod,
+    )
 )

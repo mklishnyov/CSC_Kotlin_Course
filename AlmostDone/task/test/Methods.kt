@@ -5,7 +5,7 @@ import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 internal val trimPictureMethod = TestMethod(
     "trimPicture",
     TestKotlinType("String"),
-    listOf(TestVariable("picture", "String"))
+    listOf(TestVariable("picture", "String")),
 )
 
 internal val applyBordersFilterMethod = TestMethod(
@@ -17,7 +17,7 @@ internal val applyBordersFilterMethod = TestMethod(
 internal val applySquaredFilterMethod = TestMethod(
     "applySquaredFilter",
     TestKotlinType("String"),
-    listOf(TestVariable("picture", "String"))
+    listOf(TestVariable("picture", "String")),
 )
 
 internal val applyFilterMethod = TestMethod(
@@ -28,3 +28,9 @@ internal val applyFilterMethod = TestMethod(
         TestVariable("filter", "String"),
     ),
 )
+
+internal val chooseFilterMethod = TestMethod("chooseFilter", TestKotlinType("String"))
+
+internal val safeReadLineMethod = TestMethod("safeReadLine", TestKotlinType("String"))
+
+internal val choosePictureMethod = TestMethod("choosePicture", TestKotlinType("String"))

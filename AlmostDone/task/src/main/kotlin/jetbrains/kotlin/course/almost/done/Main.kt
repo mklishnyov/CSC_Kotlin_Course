@@ -15,7 +15,17 @@ fun applyBordersFilter(picture: String): String {
     return ap.toString()
 }
 
-fun applySquaredFilter(picture: String): String = TODO()
+fun applySquaredFilter(picture: String): String {
+    val up = StringBuilder()
+    val ut = applyBordersFilter(picture).lines()
+    for (i in ut) {
+        up.append("${i.repeat(2)}$newLineSymbol")
+    }
+    for (i in 1 until ut.size) {
+        up.append("${ut[i].repeat(2)}$newLineSymbol")
+    }
+    return up.toString()
+}
 
 fun applyFilter(picture: String, filter: String): String {
     return when (filter) {
@@ -23,6 +33,21 @@ fun applyFilter(picture: String, filter: String): String {
         "squared" -> applySquaredFilter(trimPicture(picture))
         else -> error("Wrong filter name")
     }
+}
+
+fun safeReadLine(): String = readlnOrNull() ?: error("null detected")
+
+fun chooseFilter(): String {
+    var input: String
+    do {
+        println("Please choose the filter: 'borders' or 'squared'.")
+        input = safeReadLine()
+    } while (input != "borders" && input != "squared")
+    return input
+}
+
+fun choosePicture(): String {
+
 }
 
 fun main() {
