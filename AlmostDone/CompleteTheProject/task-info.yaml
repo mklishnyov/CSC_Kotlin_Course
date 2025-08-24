@@ -23,5 +23,8 @@ files:
     visible: false
     learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLScylICclQIi9_YDjO7iuyRITDLn0Qgzw_aLxKxiishKAbL0qg/viewform?usp=pp_url&entry.2103429047=Introduction/Almost+done/Finish+the+game
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 24 Aug 2025 04:11:10 UTC"
 record: -1

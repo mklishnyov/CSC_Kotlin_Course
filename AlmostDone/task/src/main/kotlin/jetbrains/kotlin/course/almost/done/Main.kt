@@ -47,11 +47,39 @@ fun chooseFilter(): String {
 }
 
 fun choosePicture(): String {
+    var input: String
+    val i = allPictures()
+    do {
+        println("Please choose a picture. The possible options are: ${allPictures()}")
+        input = safeReadLine()
+    } while (input !in i)
+    return getPictureByName(input).toString()
+}
 
+fun getPicture(): String {
+    println("Do you want to use a predefined picture or a custom one? Please input 'yes' for a predefined image or 'no' for a custom one")
+    var input = safeReadLine()
+    while (input != "yes" && input != "no") {
+        println("Please input 'yes' or 'no'")
+        input = safeReadLine()
+    }
+    return when (input) {
+        "yes" -> choosePicture()
+        else -> {
+            println("Please input a custom picture")
+            val userInput = safeReadLine()
+            userInput
+        }
+    }
+}
+
+fun photoshop(): Unit {
+    val a = getPicture()
+    val b = chooseFilter()
+    println("The old image: $newLineSymbol$a")
+    println("The transformed picture: $newLineSymbol${applyFilter(a, b)}")
 }
 
 fun main() {
-    // Uncomment this code on the last step of the game
-
-    // photoshop()
+    photoshop()
 }
