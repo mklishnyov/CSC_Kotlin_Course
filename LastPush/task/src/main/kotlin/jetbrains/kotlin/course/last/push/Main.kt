@@ -49,6 +49,24 @@ fun chooseGenerator(): String {
     return generator
 }
 
+fun getPatternHeight(pattern: String): Int = pattern.lines().size
+
+fun fillPatternRow(patternRow: String, patternWidth: Int): String {
+    if (patternRow.length > patternWidth) {
+        throw IllegalStateException("Pattern row is longer than width")
+    }
+    return patternRow + separator.toString().repeat(patternWidth - patternRow.length)
+}
+
+fun repeatHorizontally(pattern: String, n: Int, patternWidth: Int): String {
+    val builder = StringBuilder()
+    for (row in pattern.lines()) {
+        val filled = fillPatternRow(row, patternWidth)
+        builder.append("${filled.repeat(n)}$newLineSymbol")
+    }
+    return builder.toString()
+}
+
 // You will use this function later
 fun safeReadLine(): String = readlnOrNull() ?: error("Your input is incorrect, sorry")
 
