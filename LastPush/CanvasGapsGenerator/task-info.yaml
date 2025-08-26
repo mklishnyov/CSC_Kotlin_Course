@@ -32,5 +32,11 @@ files:
     visible: false
     learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLScylICclQIi9_YDjO7iuyRITDLn0Qgzw_aLxKxiishKAbL0qg/viewform?usp=pp_url&entry.2103429047=Introduction/Last+push/Canvas+gaps+generator
-status: Unchecked
+status: Failed
+feedback:
+  message: "For pattern:\n○\n, width=2, and height=1 the function canvasWithGapsGenerator\
+    \ should return \n○ \n"
+  time: "Tue, 26 Aug 2025 03:44:19 UTC"
+  expected: '○ '
+  actual: ○ ○
 record: -1

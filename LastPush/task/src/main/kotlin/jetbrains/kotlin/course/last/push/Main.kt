@@ -67,6 +67,63 @@ fun repeatHorizontally(pattern: String, n: Int, patternWidth: Int): String {
     return builder.toString()
 }
 
+fun repeatHorizontallyWithGaps(pattern: String, n: Int, patternWidth: Int): String {
+    val builder = StringBuilder()
+    val rows = pattern.lines()
+    for (row in rows) {
+        val filled = fillPatternRow(row, patternWidth)
+        repeat(n) { i ->
+            builder.append(filled)
+            if (i < n - 1) {
+                // вставляем разделитель между блоками
+                builder.append(separator)
+            }
+        }
+        builder.append(newLineSymbol)
+    }
+    return builder.toString()
+}
+
+
+fun dropTopLine(image: String, width: Int, patternHeight: Int, patternWidth: Int): String {
+    val lines = image.lines()
+    val a = StringBuilder()
+    return if (patternHeight > 1) {
+        for (i in 1 until lines.size - 1) {
+            a.append(lines[i] + newLineSymbol)
+        }
+        a.append(lines[lines.size - 1])
+        a.toString()
+    } else {
+        image
+    }
+}
+
+fun canvasGenerator(pattern: String, width: Int, height: Int): String {
+    val canvas = StringBuilder()
+    val horizontal = repeatHorizontally(pattern, width, getPatternWidth(pattern))
+    for (i in 1..height) {
+        if (i > 1) {
+            canvas.append(dropTopLine(horizontal, width, getPatternHeight(pattern), getPatternWidth(pattern)))
+        } else {
+            canvas.append(horizontal)
+        }
+    }
+    return canvas.toString()
+}
+
+fun canvasWithGapsGenerator(pattern: String, width: Int, height: Int): String {
+    val canvasWithGaps = StringBuilder()
+    for (i in 0 until height) {
+        if (i % 2 == 0) {
+            canvasWithGaps.append(repeatHorizontallyWithGaps(pattern, width, getPatternWidth(pattern)))
+        } else {
+            canvasWithGaps.append("${separator.toString().repeat(getPatternWidth(pattern))}${repeatHorizontallyWithGaps(pattern, (width - 1), getPatternWidth(pattern))}")
+        }
+    }
+    return canvasWithGaps.toString()
+}
+
 // You will use this function later
 fun safeReadLine(): String = readlnOrNull() ?: error("Your input is incorrect, sorry")
 
