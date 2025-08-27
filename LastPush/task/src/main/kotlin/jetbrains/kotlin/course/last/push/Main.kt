@@ -67,16 +67,15 @@ fun repeatHorizontally(pattern: String, n: Int, patternWidth: Int): String {
     return builder.toString()
 }
 
-fun repeatHorizontallyWithGaps(pattern: String, n: Int, patternWidth: Int): String {
+fun repeatHorizontallyWithGaps(pattern: String, n: Int): String {
     val builder = StringBuilder()
-    val rows = pattern.lines()
-    for (row in rows) {
-        val filled = fillPatternRow(row, patternWidth)
-        repeat(n) { i ->
-            builder.append(filled)
-            if (i < n - 1) {
-                // вставляем разделитель между блоками
-                builder.append(separator)
+    for (row in pattern.lines()) {
+        val filled = fillPatternRow(row, getPatternWidth(pattern))
+        for (i in 0 until n) {
+            if (i % 2 == 0) {
+                builder.append(filled)
+            } else {
+                builder.append(separator.toString().repeat(filled.length))
             }
         }
         builder.append(newLineSymbol)
@@ -84,16 +83,14 @@ fun repeatHorizontallyWithGaps(pattern: String, n: Int, patternWidth: Int): Stri
     return builder.toString()
 }
 
-
 fun dropTopLine(image: String, width: Int, patternHeight: Int, patternWidth: Int): String {
+    val builder = StringBuilder()
     val lines = image.lines()
-    val a = StringBuilder()
     return if (patternHeight > 1) {
-        for (i in 1 until lines.size - 1) {
-            a.append(lines[i] + newLineSymbol)
+        for (i in 1 until lines.size) {
+            builder.append(lines[i] + newLineSymbol)
         }
-        a.append(lines[lines.size - 1])
-        a.toString()
+        builder.toString().dropLast(newLineSymbol.length)
     } else {
         image
     }
@@ -113,16 +110,23 @@ fun canvasGenerator(pattern: String, width: Int, height: Int): String {
 }
 
 fun canvasWithGapsGenerator(pattern: String, width: Int, height: Int): String {
-    val canvasWithGaps = StringBuilder()
+    val builder = StringBuilder()
     for (i in 0 until height) {
-        if (i % 2 == 0) {
-            canvasWithGaps.append(repeatHorizontallyWithGaps(pattern, width, getPatternWidth(pattern)))
+        if (i % 2 == 0 || width == 1) {
+            builder.append(repeatHorizontallyWithGaps(pattern, width))
         } else {
-            canvasWithGaps.append("${separator.toString().repeat(getPatternWidth(pattern))}${repeatHorizontallyWithGaps(pattern, (width - 1), getPatternWidth(pattern))}")
+            val raw = repeatHorizontallyWithGaps(pattern, width - 1)
+            val lines = if (raw.endsWith(newLineSymbol)) raw.dropLast(newLineSymbol.length).lines() else raw.lines()
+            val b = StringBuilder()
+            for (line in lines) {
+                b.append(separator.toString().repeat(getPatternWidth(pattern)) + line + newLineSymbol)
+            }
+            builder.append(b.toString())
         }
     }
-    return canvasWithGaps.toString()
+    return builder.toString().dropLast(newLineSymbol.length)
 }
+
 
 // You will use this function later
 fun safeReadLine(): String = readlnOrNull() ?: error("Your input is incorrect, sorry")
